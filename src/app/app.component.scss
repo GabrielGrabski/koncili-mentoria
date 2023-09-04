@@ -1,0 +1,77 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card-container {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card {
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.profile {
+    height: 63%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 5rem;
+    background-color: green;
+}
+
+.content-container {
+    width: 60%;
+    height: 63%;
+    padding: 1.5rem;
+}
+
+.main-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 1.4rem;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0.8rem;
+    flex-wrap: wrap;
+
+    .input-field {
+        margin: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        label {
+            font-size: 0.8rem;
+        }
+    
+        input {
+            border: none;
+            border-radius: 0.2rem;
+            background-color: #eee;
+            padding: 0.6rem;
+    
+            &[type="submit"] {
+                background-color: green;
+                color: white;
+                cursor: pointer;
+                text-align: center;
+            }
+        }
+    }
+}
