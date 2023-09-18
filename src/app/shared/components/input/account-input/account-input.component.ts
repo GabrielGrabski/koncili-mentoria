@@ -9,5 +9,6 @@ export class AccountInputComponent {
 
   @Input() placeholder: string = "";
   @Input() labelText: string = "";
-
+  @Input() type: string = "text";
+  @Input() readOnly: boolean = false;
 }

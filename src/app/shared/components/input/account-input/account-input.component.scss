@@ -9,6 +9,10 @@
         border-radius: 0.2rem;
         background-color: #eee;
         padding: 0.6rem;
+
+        &:read-only {
+            background-color: #c1c1c1;
+        }
     
         &[type="submit"] {
             background-color: green;
