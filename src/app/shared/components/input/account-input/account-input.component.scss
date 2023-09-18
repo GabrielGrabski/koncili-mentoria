@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+    gap: 0.5rem;
+
+    input {
+        border: none;
+        border-radius: 0.2rem;
+        background-color: #eee;
+        padding: 0.6rem;
+    
+        &[type="submit"] {
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+        }
+    }
+}
