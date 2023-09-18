@@ -16,26 +16,10 @@
     background-color: white;
 }
 
-.profile {
-    height: 63%;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.photo {
-    width: 8rem;
-    height: 8rem;
-    border-radius: 5rem;
-    background-color: green;
-}
-
 .content-container {
-    width: 60%;
-    height: 63%;
+    width: 100%;
     padding: 1.5rem;
+    margin: 2rem 3rem;
 }
 
 .main-title {
