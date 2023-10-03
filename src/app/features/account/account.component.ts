@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AccountComponent {
 
+  isMyAcconutSelected: boolean = false
+  options: string[] = [
+    "%001%",
+    "%002%",
+    "%003%",
+  ]
+  lastUsage: string = new Date().toLocaleString();
 }

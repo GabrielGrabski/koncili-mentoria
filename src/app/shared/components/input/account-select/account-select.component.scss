@@ -1,0 +1,10 @@
+@import '../account-input/account-input.component.scss';
+
+.container {
+    select {
+        border: none;
+        border-radius: 0.2rem;
+        background-color: #eee;
+        padding: 0.6rem;
+    }
+}

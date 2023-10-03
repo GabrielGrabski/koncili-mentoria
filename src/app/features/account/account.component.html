@@ -1,31 +1,58 @@
 <div class="card-container">
     <div class="content-container card">
-        <h1 class="main-title">Meus Dados</h1>
-        <form class="form-container">
-            <div class="input-field">
-                <app-account-input [readOnly]="true" labelText="Nome Fantasia" placeholder="Teste Móveis">
-                </app-account-input>
+        <div class="sidebar">
+            <div class="sidebar-menu">
+                <div class="sidebar-item">
+                    <a href="/features/account" (click)="isMyAcconutSelected = true">
+                        <h3>Minha Conta</h3>
+                        <p>Este e um texto de exemplo para a minha conta lalaalalalal</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <h1 class="main-title">Meus Dados</h1>
+            <form class="form-container">
+                <div class="input-field">
+                    <app-account-input [readOnly]="true" labelText="Nome Fantasia" placeholder="Teste Móveis">
+                    </app-account-input>
+                </div>
+    
+                <div class="input-field">
+                    <app-account-input [readOnly]="true" labelText="CNPJ" placeholder="12.***.***.***/000*.**">
+                    </app-account-input>
+                </div>
+    
+                <div class="input-field">
+                    <app-account-input [readOnly]="true" labelText="País" placeholder="Brasil">
+                    </app-account-input>
+                </div>
+    
+                <div class="input-field">
+                    <app-account-input [readOnly]="true" labelText="Data de entrada" placeholder="10/05/2023">
+                    </app-account-input>
+                </div>
+    
+                <div class="input-field">
+                    <app-account-select label="Segmento" [options]="options"></app-account-select>
+                </div>
+            </form>
+
+            <div class="last-usage">
+                <div class="title">
+                    <h3>Utilização do sistema</h3>
+                    <img src="../../../assets/icons/info-circle.svg" alt="question-icon">
+                </div>
+                <div class="content">
+                    <label>Última atualização: {{lastUsage}}</label>
+                </div>
             </div>
 
-            <div class="input-field">
-                <app-account-input [readOnly]="true" labelText="CNPJ" placeholder="12.***.***.***/000*.**">
-                </app-account-input>
+            <div class="period">
+                <app-account-input labelText="Período Inicial" type="date"></app-account-input>
+                <app-account-input labelText="Período Final" type="date"></app-account-input>
             </div>
-
-            <div class="input-field">
-                <app-account-input [readOnly]="true" labelText="País" placeholder="Brasil">
-                </app-account-input>
-            </div>
-
-            <div class="input-field">
-                <app-account-input [readOnly]="true" labelText="Data de entrada" placeholder="10/05/2023">
-                </app-account-input>
-            </div>
-
-            <div class="input-field">
-                <app-account-input labelText="Segmento" placeholder="%000%">
-                </app-account-input>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
