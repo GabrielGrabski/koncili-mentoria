@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { AccountComponent } from './account/account.component';
 import { SharedModule } from '../shared/shared.module';
 import { FeaturesRoutingModule } from './features-routing.module';
-
+import { FormsModule } from '@angular/forms';
+import { TableModule } from 'primeng/table';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import { FeaturesRoutingModule } from './features-routing.module';
   imports: [
     CommonModule,
     SharedModule,
-    FeaturesRoutingModule
+    FeaturesRoutingModule,
+    FormsModule,
+    TableModule
   ]
 })
 export class FeaturesModule { }

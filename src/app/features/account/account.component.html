@@ -15,17 +15,27 @@
             <h1 class="main-title">Meus Dados</h1>
             <form class="form-container">
                 <div class="input-field">
-                    <app-account-input [readOnly]="true" labelText="Nome Fantasia" placeholder="Teste Móveis">
+                    <app-account-input 
+                    [readOnly]="true" 
+                    labelText="Nome Fantasia" 
+                    placeholder="Teste Móveis">
                     </app-account-input>
                 </div>
     
                 <div class="input-field">
-                    <app-account-input [readOnly]="true" labelText="CNPJ" placeholder="12.***.***.***/000*.**">
+                    <app-account-input 
+                    [readOnly]="true" 
+                    labelText="CNPJ"
+                    [placeholder]="maskedCnpj"
+                    [(ngModel)]="maskedCnpj">
                     </app-account-input>
                 </div>
     
                 <div class="input-field">
-                    <app-account-input [readOnly]="true" labelText="País" placeholder="Brasil">
+                    <app-account-input 
+                    [readOnly]="true" 
+                    labelText="País"
+                    placeholder="Brasil">
                     </app-account-input>
                 </div>
     
@@ -53,6 +63,21 @@
                 <app-account-input labelText="Período Inicial" type="date"></app-account-input>
                 <app-account-input labelText="Período Final" type="date"></app-account-input>
             </div>
+
+            <div class="table-headers">
+                <h3>Marketplace</h3>
+                <h3>Pedidos Contabilizados</h3>
+            </div>
+            <table >
+                <tr *ngFor="let item of tableValues" class="table-row">
+                    <td>{{ item.marketplace }}</td>
+                    <td>{{ item.value }}</td>
+                </tr>
+                <tr class="table-header">
+                    <td><b>Total</b></td>
+                    <td><b>10000</b></td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
